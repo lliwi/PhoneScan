@@ -8,7 +8,7 @@ import json
 def scra(p, n):
     print(Fore.LIGHTMAGENTA_EX +"Resultados del escaneo:")
     number = p[0:3]+n
-    api_key = "API_LAYER_KEY"
+    api_key = "APLILAYER_API_KEY"
     url = "https://api.apilayer.com/number_verification/validate?number="+number
     headers = {"apikey": api_key}
     r = requests.get(url, headers=headers)
