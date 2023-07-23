@@ -10,7 +10,8 @@ def enviar (n):
     if(len(n) < 7):
         print(Fore.RED+"Le faltan numeros a este telefono.")
         return
-    pais = n[0:3]
-    numero = n[3:20]
+    pais = n[0:2]
+    numero = n[2:20]
+    print(numero)
     print (Fore.GREEN + "enviando...")
     scra(pais, numero)
