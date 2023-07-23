@@ -9,8 +9,9 @@ def scra(p, n):
     print(Fore.LIGHTMAGENTA_EX +"Resultados del escaneo:")
     number = p[1:3]+n
     kato_key = "a65976cc48a83b234e1b7177d0b3840f"
-    url = "http://apilayer.net/api/validate?access_key="+kato_key+"&number="+number+""
-    r = requests.get(url)
+    url = "https://api.apilayer.com/number_verification/validate?number="+number+""
+    headers = {"apikey": "+kato_key+"}
+    r = requests.get(url, headers=headers)
     j = json.loads(r.text)
     if j['valid'] == False:
         print(Fore.RED + 'El numero que introduciste no es real :(')
