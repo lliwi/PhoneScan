@@ -12,6 +12,5 @@ def enviar (n):
         return
     pais = n[0:2]
     numero = n[2:20]
-    print(numero)
     print (Fore.GREEN + "enviando...")
     scra(pais, numero)
