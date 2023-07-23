@@ -10,7 +10,6 @@ def scra(p, n):
     number = p[0:3]+n
     api_key = "API_LAYER_KEY"
     url = "https://api.apilayer.com/number_verification/validate?number="+number
-    print(url)
     headers = {"apikey": api_key}
     r = requests.get(url, headers=headers)
     j = json.loads(r.text)
